@@ -1,0 +1,15 @@
+﻿  PlainText.cpp
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.cpp(6,12): error C2084: function 'PlainText::PlainText(std::string &)' already has a body
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(12,5):
+      see previous definition of 'PlainText::PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.cpp(22,12): error C3867: 'PlainText::isEncrypt': non-standard syntax; use '&' to create a pointer to member
+  ShiftText.cpp
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(5,7): error C2011: 'PlainText': 'class' type redefinition
+  (compiling source file 'ShiftText.cpp')
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(5,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(46,14): error C2059: syntax error: '.'
+  ShiftText.h
+  Generating Code...
