@@ -1,87 +1,77 @@
 #include <iostream>
 #include <string>
-#include "ShiftText.h"
 #include "PlainText.h"
+#include "ShiftText.h"
+
 using namespace std;
 
-// constructor to init _text and _key
-ShiftText::ShiftText(string& text, int key) : _text(text), _key(key) {}
+// constructor
+ShiftText::ShiftText(const string& text, int key) : PlainText(text), _key(key) 
+{
+ 
+    encrypt(text, key);
+
+}
 
 // destructor
- ShiftText::~ShiftText() {}
-
-
+ShiftText::~ShiftText() {}
 
 // static encryption function
-static string encrypt(string& text, int key)
+string ShiftText::encrypt(const string& text, int key)
 {
-    for (char& oneChar : text)
+    string result = text; 
+    for (char& oneChar : result)
     {
         if (isalpha(oneChar))
         {
-            if (isupper(oneChar))
-                oneChar = (oneChar - 'A' + key) % 26 + 'A'; // shift for upper letters
-            else
-                oneChar = (oneChar - 'a' + key) % 26 + 'a'; // shift for lower letters
+            oneChar = tolower(oneChar);
+            oneChar = (oneChar - 'a' + key) % 26 + 'a'; // shift
         }
     }
-    return text;
+    return result;
 }
-
-
 
 // static decryption function
-static string decrypt(string& text, int key)
+string ShiftText::decrypt(const string& text, int key)
 {
-    for (char& oneChar : text)
+    string result = text;
+    for (char& oneChar : result)
     {
         if (isalpha(oneChar))
         {
-            if (isupper(oneChar))
-                oneChar = (oneChar - 'A' - key + 26) % 26 + 'A';  // reverse shift for uppe letters
-            else
-                oneChar = (oneChar - 'a' - key + 26) % 26 + 'a';  // reverse shift for lower letters
+            oneChar = tolower(oneChar);
+            oneChar = (oneChar - 'a' - key + 26) % 26 + 'a'; // reverse shift
         }
     }
-    return text;
+    return result;
 }
 
-
-
-
-// encryption function
-string ShiftText::encrypt(string& text, int key)
+// not static encryption function (operates on _text)
+string ShiftText::encrypt()
 {
-    for (char& oneChar : text)
+    for (char& oneChar : _text)
     {
         if (isalpha(oneChar))
         {
-            if (isupper(oneChar))
-                oneChar = (oneChar - 'A' + key) % 26 + 'A'; // shift for upper letters
-            else
-                oneChar = (oneChar - 'a' + key) % 26 + 'a'; // shift for lower letters
+            oneChar = tolower(oneChar);
+            oneChar = (oneChar - 'a' + _key) % 26 + 'a'; // shift
         }
-        // _isEncrypt(parent class member) = true;
     }
     _isEncrypt = true;
-    return text;
+    return _text;
 }
 
-
-
-// decryption function
-string ShiftText::decrypt(string& text, int key)
+// not static decryption function (operates on _text)
+string ShiftText::decrypt()
 {
-    for (char& oneChar : text)
+    for (char& oneChar : _text)
     {
         if (isalpha(oneChar))
         {
-            if (isupper(oneChar))
-                oneChar = (oneChar - 'A' - key + 26) % 26 + 'A';  // reverse shift for uppercase letters
-            else
-                oneChar = (oneChar - 'a' - key + 26) % 26 + 'a';  // reverse shift for lowercase letters
+            oneChar = tolower(oneChar);
+            oneChar = (oneChar - 'a' - _key + 26) % 26 + 'a'; // reverse shift
         }
     }
     _isEncrypt = false;
-    return text;
+    return _text;
 }

@@ -1,5 +1,4 @@
 #include <string>
-
 using namespace std;
 
 class PlainText
@@ -7,10 +6,9 @@ class PlainText
 protected:
     string _text;
     bool _isEncrypt;
-
+    static int numOfTexts;
 public:
-    PlainText(std::string& str);
-
+    PlainText(const std::string& str);
     ~PlainText();
 
     bool isEncrypt() const;

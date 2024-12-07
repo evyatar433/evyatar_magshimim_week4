@@ -1,15 +1,159 @@
-﻿  PlainText.cpp
-C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.cpp(6,12): error C2084: function 'PlainText::PlainText(std::string &)' already has a body
-      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(12,5):
-      see previous definition of 'PlainText::PlainText'
-  
-C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.cpp(22,12): error C3867: 'PlainText::isEncrypt': non-standard syntax; use '&' to create a pointer to member
-  ShiftText.cpp
-C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(5,7): error C2011: 'PlainText': 'class' type redefinition
-  (compiling source file 'ShiftText.cpp')
-      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(5,7):
+﻿  CaesarText.cpp
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7): error C2011: 'PlainText': 'class' type redefinition
+  (compiling source file 'CaesarText.cpp')
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
       see declaration of 'PlainText'
   
-C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(46,14): error C2059: syntax error: '.'
-  ShiftText.h
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.h(6,26): error C2504: 'PlainText': base class undefined
+  (compiling source file 'CaesarText.cpp')
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.h(6,7): error C2011: 'ShiftText': 'class' type redefinition
+  (compiling source file 'CaesarText.cpp')
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.h(6,7):
+      see declaration of 'ShiftText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.h(5,27): error C2504: 'ShiftText': base class undefined
+  (compiling source file 'CaesarText.cpp')
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(9,46): error C2614: 'CaesarText': illegal member initialization: 'ShiftText' is not a base or member
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(55,26): error C2065: '_text': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(55,16): error C2530: 'oneChar': references must be initialized
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(55,24): error C2143: syntax error: missing ';' before ':'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(55,31): error C2143: syntax error: missing ';' before ')'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(64,5): error C2065: '_isEncrypt': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(65,12): error C2065: '_text': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(71,26): error C2065: '_text': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(71,16): error C2530: 'oneChar': references must be initialized
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(71,24): error C2143: syntax error: missing ';' before ':'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(71,31): error C2143: syntax error: missing ';' before ')'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(80,5): error C2065: '_isEncrypt': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.cpp(81,12): error C2065: '_text': undeclared identifier
+  conversation.cpp
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7): error C2011: 'PlainText': 'class' type redefinition
+  (compiling source file 'conversation.cpp')
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.h(5,33): error C2504: 'PlainText': base class undefined
+  (compiling source file 'conversation.cpp')
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.h(6,7): error C2011: 'ShiftText': 'class' type redefinition
+  (compiling source file 'conversation.cpp')
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.h(6,7):
+      see declaration of 'ShiftText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.h(5,27): error C2504: 'ShiftText': base class undefined
+  (compiling source file 'conversation.cpp')
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(45,12): error C2079: 'receive' uses undefined class 'PlainText'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(45,19): error C2440: 'initializing': cannot convert from 'const char [1]' to 'int'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(45,19):
+      There is no context in which this conversion is possible
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(48,12): error C2027: use of undefined type 'PlainText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(48,15): error C2027: use of undefined type 'PlainText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(52,25): error C2027: use of undefined type 'ShiftText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.h(6,7):
+      see declaration of 'ShiftText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(56,12): error C2027: use of undefined type 'PlainText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(56,15): error C2027: use of undefined type 'PlainText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(64,11): error C2027: use of undefined type 'PlainText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(67,42): error C2039: 'getText': is not a member of 'SubstitutionText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.h(5,7):
+      see declaration of 'SubstitutionText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(69,18): error C2027: use of undefined type 'PlainText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(76,11): error C2027: use of undefined type 'PlainText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(76,11): error C2027: use of undefined type 'ShiftText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.h(6,7):
+      see declaration of 'ShiftText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(76,25): error C2027: use of undefined type 'ShiftText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.h(6,7):
+      see declaration of 'ShiftText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(80,42): error C2027: use of undefined type 'ShiftText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.h(6,7):
+      see declaration of 'ShiftText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(82,18): error C2027: use of undefined type 'PlainText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(89,11): error C2027: use of undefined type 'PlainText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(92,42): error C2039: 'getText': is not a member of 'CaesarText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\CaesarText.h(5,7):
+      see declaration of 'CaesarText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\conversation.cpp(94,18): error C2027: use of undefined type 'PlainText'
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+  ShiftText.cpp
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7): error C2011: 'PlainText': 'class' type redefinition
+  (compiling source file 'ShiftText.cpp')
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.h(6,26): error C2504: 'PlainText': base class undefined
+  (compiling source file 'ShiftText.cpp')
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(9,53): error C2614: 'ShiftText': illegal member initialization: 'PlainText' is not a base or member
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(52,26): error C2065: '_text': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(52,16): error C2530: 'oneChar': references must be initialized
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(52,24): error C2143: syntax error: missing ';' before ':'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(52,31): error C2143: syntax error: missing ';' before ')'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(60,5): error C2065: '_isEncrypt': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(61,12): error C2065: '_text': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(67,26): error C2065: '_text': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(67,16): error C2530: 'oneChar': references must be initialized
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(67,24): error C2143: syntax error: missing ';' before ':'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(67,31): error C2143: syntax error: missing ';' before ')'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(75,5): error C2065: '_isEncrypt': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(76,12): error C2065: '_text': undeclared identifier
+  SubstitutionText.cpp
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7): error C2011: 'PlainText': 'class' type redefinition
+  (compiling source file 'SubstitutionText.cpp')
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\PlainText.h(4,7):
+      see declaration of 'PlainText'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.h(5,33): error C2504: 'PlainText': base class undefined
+  (compiling source file 'SubstitutionText.cpp')
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.cpp(11,7): error C2614: 'SubstitutionText': illegal member initialization: 'PlainText' is not a base or member
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.cpp(98,26): error C2084: function 'std::string SubstitutionText::decrypt(const std::string &,const std::string &)' already has a body
+      C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.cpp(26,26):
+      see previous definition of 'SubstitutionText::decrypt'
+  
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.cpp(183,25): error C2065: '_text': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.cpp(183,23): error C2143: syntax error: missing ';' before ':'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.cpp(183,30): error C2143: syntax error: missing ';' before ')'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.cpp(246,25): error C2065: '_text': undeclared identifier
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.cpp(246,23): error C2143: syntax error: missing ';' before ':'
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\SubstitutionText.cpp(246,30): error C2143: syntax error: missing ';' before ')'
   Generating Code...

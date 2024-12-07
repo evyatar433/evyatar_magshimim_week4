@@ -1,30 +1,29 @@
 #include <string>
 using namespace std;
-#include "PlainText.h"  // Assuming this is a valid header for PlainText
+#include "PlainText.h" 
 
+// inheritance from PlainText
 class ShiftText : public PlainText
 {
-
-protected:
+private:
     int _key;
-    string _text;
 
 public:
-    // constructor to init _text and _key
-    ShiftText(string& text, int key);
+    // constructor
+    ShiftText(const string& text, int key);
 
     // destructor
     ~ShiftText();
 
+    // static encryption function
+    static string encrypt(const string& text, int key);
 
-    static string encrypt(string& text, int key);
+    // static decryption function
+    static string decrypt(const string& text, int key);
 
-    static string decrypt(string& text, int key);
+    // not static encryption function (operates on _text)
+    string encrypt();
 
-
-    // not static encryption function
-    string encrypt(string& text, int key);
-
-    // not static deryption function
-    string decrypt(string& text, int key);
+    // not static decryption function (operates on _text)
+    string decrypt();
 };

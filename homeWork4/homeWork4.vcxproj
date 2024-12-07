@@ -127,15 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CaesarText.cpp" />
+    <ClCompile Include="conversation.cpp" />
+    <ClCompile Include="FileHelper.cpp" />
+    <ClCompile Include="fileHelper.h" />
     <ClCompile Include="PlainText.cpp" />
     <ClCompile Include="ShiftText.cpp" />
     <ClCompile Include="ShiftText.h" />
+    <ClCompile Include="SubstitutionText.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BonusText.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Caesar.Text.h" />
+    <ClInclude Include="CaesarText.h" />
     <ClInclude Include="PlainText.h" />
     <ClInclude Include="SubstitutionText.h" />
   </ItemGroup>
