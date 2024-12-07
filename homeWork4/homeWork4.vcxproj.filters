@@ -30,13 +30,13 @@
     <ClCompile Include="SubstitutionText.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="conversation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="fileHelper.h">
+    <ClCompile Include="FileHelper.h">
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="FileHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="conversation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

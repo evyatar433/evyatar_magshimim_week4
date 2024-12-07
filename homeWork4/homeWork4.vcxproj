@@ -130,7 +130,7 @@
     <ClCompile Include="CaesarText.cpp" />
     <ClCompile Include="conversation.cpp" />
     <ClCompile Include="FileHelper.cpp" />
-    <ClCompile Include="fileHelper.h" />
+    <ClCompile Include="FileHelper.h" />
     <ClCompile Include="PlainText.cpp" />
     <ClCompile Include="ShiftText.cpp" />
     <ClCompile Include="ShiftText.h" />

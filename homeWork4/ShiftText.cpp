@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include "PlainText.h"
 #include "ShiftText.h"
 
 using namespace std;

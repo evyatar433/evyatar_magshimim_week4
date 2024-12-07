@@ -10,7 +10,8 @@ protected:
 public:
     PlainText(const std::string& str);
     ~PlainText();
-
+   /* friend std::ostream& operator<<(std::ostream& text, const PlainText& key);*/
     bool isEncrypt() const;
     string getText() const;
 };
+ 

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include "PlainText.h"
 #include "ShiftText.h"
 #include "CaesarText.h"
 using namespace std;
@@ -8,7 +7,7 @@ using namespace std;
 //constructor 
 CaesarText::CaesarText(const string& text) : ShiftText(text,3)
 {
-    encrypt();  // encrypt the text in the constructor
+    encrypt(); 
 }
 
 
@@ -24,7 +23,7 @@ string CaesarText::encrypt(string& text)
     {
         if (isalpha(oneChar))
         {
-            // convert to lowercase before shifting
+            // convert to lower before shifting
             oneChar = tolower(oneChar);
             oneChar = (oneChar - 'a' + 3 ) % 26 + 'a'; // shift
         }
@@ -41,7 +40,7 @@ string CaesarText::decrypt(string& text)
     {
         if (isalpha(oneChar))
         {
-            // convert to lowercase before shifting
+            // convert to lower before shifting
             oneChar = tolower(oneChar);
             oneChar = (oneChar - 'a' - 3 + 26) % 26 + 'a';  // reverse shift 
         }
@@ -72,7 +71,7 @@ string CaesarText::decrypt()
     {
         if (isalpha(oneChar))
         {
-            // convert to lowercase before shifting
+            // convert to lower before shifting
             oneChar = tolower(oneChar);
             oneChar = (oneChar - 'a' - 3 + 26) % 26 + 'a'; // reverse shift 
         }

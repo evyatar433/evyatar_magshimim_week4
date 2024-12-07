@@ -12,8 +12,15 @@ bool PlainText::isEncrypt() const
     return _isEncrypt;
 }
 
-// return the text
-string PlainText::getText() const
+std::string PlainText::getText() const
 {
     return _text;
 }
+
+//std::ostream& operator<<(std::ostream& os, const PlainText& p)
+//{
+//    std::string a = p.getText();
+//    std::string encryptedText = ShiftText::encrypt(a);
+//    os << encryptedText;  // Print the encrypted text
+//    return os;
+//}

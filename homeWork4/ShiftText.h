@@ -1,6 +1,6 @@
 #include <string>
 using namespace std;
-#include "PlainText.h" 
+#include "PlainText.h"
 
 // inheritance from PlainText
 class ShiftText : public PlainText

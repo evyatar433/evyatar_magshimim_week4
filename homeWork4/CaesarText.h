@@ -1,6 +1,5 @@
 #include <string>
-using namespace std;
-#include "ShiftText.h" 
+using namespace std; 
 //inheritance from shiftText
 class CaesarText : public ShiftText
 {
