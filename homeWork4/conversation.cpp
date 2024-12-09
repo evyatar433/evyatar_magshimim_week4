@@ -30,7 +30,7 @@ int main()
 
 /*
 This is Alice's part in the conversation.
-It gets a legal string from the user ans sends it to Bob in
+It gets a legal string from the user and sends it to Bob in
 three different kinds of encryptions.
 It also prints every response from Bob.
 */

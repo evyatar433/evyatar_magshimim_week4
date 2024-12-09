@@ -2,25 +2,29 @@
 //#include <fstream>
 //#include <sstream>
 //#include <string>
-//#include "fileHelper.h"
+//#include "FileHelper.h"
+//#include "PlainText.h"
 //using namespace std;
 //
-//string  FileHelper::readFileToString(const std::string& fileName)
+//
+//
+//string FileHelper::readFileToString(string& fileName)
 //{
 //    std::ifstream file(fileName);
-//    if (!file.is_open()) {
-//        return ""; 
+//    if (!file.is_open())
+//    {
+//        return "";
 //    }
 //
 //    std::stringstream buffer;
-//    buffer << file.rdbuf();  
+//    buffer << file.rdbuf();
 //
-//    return buffer.str();
-//};
-//
+//}
 //
 //
-//void FileHelper::(string& inputFileName, string& outputFileName)
+//
+//
+//void FileHelper::writeWordsToFile(string& inputFileName, string& outputFileName)
 //{
 //
 //    ifstream inputFile(inputFileName);  
@@ -51,10 +55,12 @@
 //
 //}
 //
+//
 //void FileHelper::saveTextInFile(const string& text, const string& outputFileName)
 //{
 //    ofstream outFile(outputFileName);
-//    if (outFile.is_open()) {
+//    if (outFile.is_open()) 
+//    {
 //        outFile << text;
 //        outFile.close();
 //    }

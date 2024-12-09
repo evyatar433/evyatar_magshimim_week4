@@ -24,19 +24,19 @@
     <ClCompile Include="ShiftText.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CaesarText.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SubstitutionText.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="FileHelper.h">
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="FileHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="conversation.cpp">
+    <ClCompile Include="test1Shift.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CaesarText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubstitutionText.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

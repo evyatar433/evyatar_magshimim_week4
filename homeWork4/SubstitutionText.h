@@ -1,28 +1,23 @@
+#ifndef SUBSTITUTIONTEXT_H
+#define SUBSTITUTIONTEXT_H
+#include <iostream>
+#include <fstream>
 #include <string>
-using namespace std;
+#include "PlainText.h"
+
+
 class SubstitutionText : public PlainText
 {
 private:
-    string _dictionaryFileName;
+	std::string dictionaryFileName;
 
 public:
-    // constructor
-    SubstitutionText(const string& text, const string& dictionaryFileName);
-
-    // destructor
-    ~SubstitutionText();
-
-
-    // static encryption function
-    static string encrypt(const string& text, const string& dictionaryFileName);
-
-
-    // static decryption function
-    static string decrypt(const string& text, const string& dictionaryFileName);
-
-    // not static encrypt method
-    string encrypt();
-
-    // not static decrypt method
-    string decrypt();
+	SubstitutionText(std::string text, std::string dictionaryFileName);
+	~SubstitutionText();
+	static std::string encrypt(std::string text, std::string dictionaryFileName);
+	static std::string decrypt(std::string text, std::string dictionaryFileName);
+	std::string decrypt();
+	std::string encrypt();
 };
+
+#endif

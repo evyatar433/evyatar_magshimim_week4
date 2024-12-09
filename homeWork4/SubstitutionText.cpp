@@ -1,115 +1,103 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <unordered_map>
-#include "PlainText.h"
 #include "SubstitutionText.h"
-using namespace std;
 
-// constructor
-SubstitutionText::SubstitutionText(const string& text, const string& dictionaryFileName)
-    : PlainText(text), _dictionaryFileName(dictionaryFileName)
+SubstitutionText::SubstitutionText(std::string text, std::string dictionaryFileName) : PlainText(encrypt(text, dictionaryFileName)), dictionaryFileName(dictionaryFileName)
 {
-    encrypt(text, dictionaryFileName);  
+	this->_isEncrypted = true;
 }
 
-// destructor
-SubstitutionText::~SubstitutionText() {}
-
-// Static decrypt function
-string SubstitutionText::decrypt(const string& encryptedText, const string& dictionaryFileName)
+SubstitutionText::~SubstitutionText()
 {
-    unordered_map<char, char> substitutionMap;
-    ifstream myfile(dictionaryFileName);
-    string line;
-
-    if (myfile.is_open())
-    {
-        while (getline(myfile, line))
-        {
-            char originalChar = line[0];
-            char substituteChar = line[2];
-            substitutionMap[substituteChar] = originalChar; // reverse the substitution
-        }
-        myfile.close();
-    }
-    else
-    {
-        cerr << "Error: Could not open file" << endl;
-        return "";
-    }
-
-    string decryptedText;
-    for (char oneChar : encryptedText)
-    {
-        if (isalpha(oneChar))
-        {
-            char lowerChar = tolower(oneChar);
-            if (substitutionMap.find(lowerChar) != substitutionMap.end())
-            {
-                decryptedText += substitutionMap[lowerChar];
-            }
-        }
-        else
-        {
-            decryptedText += oneChar;  // symbols not change
-        }
-    }
-
-    return decryptedText;
+	this->dictionaryFileName = "";
 }
 
-// static encrypt function
-string SubstitutionText::encrypt(const string& text, const string& dictionaryFileName)
+std::string SubstitutionText::encrypt(std::string text, std::string dictionaryFileName)
 {
-    unordered_map<char, char> substitutionMap;
-    ifstream myfile(dictionaryFileName);
-    string line;
+	int length = text.size();
+	int i = 0;
+	int j = 0;
+	std::string fileName = dictionaryFileName;
+	std::string line;
+	std::ifstream MyReadFile(fileName);
 
-    if (myfile.is_open())
-    {
-        while (getline(myfile, line))
-        {
-            char originalChar = line[0];
-            char substituteChar = line[2];
-            substitutionMap[originalChar] = substituteChar; // store the substitution
-        }
-        myfile.close();
-    }
-    else
-    {
-        cerr << "Error: Could not open file" << endl;
-        return "";
-    }
+	for (i = 0; i < length; i++)
+	{
+		if (isalpha(text[i]))
+		{
+			while (getline(MyReadFile, line))
+			{
+				if (text[i] == line[0])
+				{
+					text[i] = line[2];
+					MyReadFile.clear();
+					MyReadFile.seekg(0);
+					break;
+				}
+				else
+				{
+					continue;
+				}
+			}
+		}
+	}
+	MyReadFile.close();
+	return text;
 
-    string encryptedText;
-    for (char oneChar : text)
-    {
-        if (isalpha(oneChar))
-        {
-            char lowerChar = tolower(oneChar);
-            if (substitutionMap.find(lowerChar) != substitutionMap.end())
-            {
-                encryptedText += substitutionMap[lowerChar];
-            }
-        }
-        else
-        {
-            encryptedText += oneChar; // symbols not change
-        }
-    }
-
-    return encryptedText;
 }
 
-// not static encrypt function
-string SubstitutionText::encrypt()
+std::string SubstitutionText::decrypt(std::string text, std::string dictionaryFileName)
 {
-    return encrypt(_text, _dictionaryFileName);  // Use the instance's text
+
+	int length = text.size();
+	int i = 0;
+	int j = 0;
+	std::string fileName = dictionaryFileName;
+	std::string line;
+	std::ifstream MyReadFile(fileName);
+
+	for (i = 0; i < length; i++)
+	{
+		if (isalpha(text[i]))
+		{
+			while (getline(MyReadFile, line))
+			{
+				if (text[i] == line[2])
+				{
+					text[i] = line[0];
+					MyReadFile.clear();
+					MyReadFile.seekg(0);
+					break;
+				}
+				else
+				{
+					continue;
+				}
+			}
+		}
+	}
+	MyReadFile.close();
+	return text;
 }
 
-// not static decrypt function
-string SubstitutionText::decrypt()
+std::string SubstitutionText::decrypt()
 {
-    return decrypt(_text, _dictionaryFileName);  
+	if (this->_isEncrypted == false)
+	{
+		return this->_text;
+	}
+	std::string text = getText();
+	this->_text = decrypt(text, this->dictionaryFileName);
+	this->_isEncrypted = false;
+	return this->_text;
+}
+
+std::string SubstitutionText::encrypt()
+{
+	if (this->_isEncrypted == true)
+	{
+		return this->_text;
+	}
+	std::string text = getText();
+	this->_text = encrypt(text, this->dictionaryFileName);
+	this->_isEncrypted = true;
+	return this->_text;
 }

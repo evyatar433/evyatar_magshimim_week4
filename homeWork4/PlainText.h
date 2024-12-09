@@ -1,17 +1,19 @@
-#include <string>
-using namespace std;
+#ifndef _PLAINTEXT_H_
+#define _PLAINTEXT_H_
+#include <iostream>
 
 class PlainText
 {
 protected:
-    string _text;
-    bool _isEncrypt;
-    static int numOfTexts;
+	std::string _text;
+	bool _isEncrypted;
+
 public:
-    PlainText(const std::string& str);
-    ~PlainText();
-   /* friend std::ostream& operator<<(std::ostream& text, const PlainText& key);*/
-    bool isEncrypt() const;
-    string getText() const;
+	static int numOfTexts;
+	PlainText(std::string text);
+	~PlainText();
+	bool isEncrypted() const;
+	std::string getText() const;
 };
- 
+
+#endif

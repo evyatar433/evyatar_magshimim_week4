@@ -1,81 +1,81 @@
-#include <iostream>
-#include <string>
-#include "ShiftText.h"
 #include "CaesarText.h"
-using namespace std;
 
-//constructor 
-CaesarText::CaesarText(const string& text) : ShiftText(text,3)
+// constructor
+CaesarText::CaesarText(std::string text) : ShiftText(text, 3)
 {
-    encrypt(); 
+
 }
 
-
-//destructor
-CaesarText::~CaesarText() {}
-
-
-
-// static encryption function
-string CaesarText::encrypt(string& text)
+// destructor
+CaesarText::~CaesarText()
 {
-    for (char& oneChar : text)
-    {
-        if (isalpha(oneChar))
-        {
-            // convert to lower before shifting
-            oneChar = tolower(oneChar);
-            oneChar = (oneChar - 'a' + 3 ) % 26 + 'a'; // shift
-        }
-    }
-    return text;
+
 }
 
-
-
-// static decryption function
-string CaesarText::decrypt(string& text)
+std::string CaesarText::encrypt(std::string text)
 {
-    for (char& oneChar : text)
-    {
-        if (isalpha(oneChar))
-        {
-            // convert to lower before shifting
-            oneChar = tolower(oneChar);
-            oneChar = (oneChar - 'a' - 3 + 26) % 26 + 'a';  // reverse shift 
-        }
-    }
-    return text;
+	int i = 0;
+	int j = 0;
+	int length = text.size();
+	for (i = 0; i < length; i++)
+	{
+		if (isalpha(text[i]))
+		{
+			for (j = 0; j < 3; j++)
+			{
+				text[i] += 1;
+				if (text[i] > 'z')
+				{
+					text[i] = 'a';
+				}
+			}
+		}
+	}
+	return text;
 }
 
-// not static encryption functione
-string CaesarText::encrypt()
+std::string CaesarText::decrypt(std::string text)
 {
-    for (char& oneChar : _text)
-    {
-        if (isalpha(oneChar))
-        {
-            // convert to lowercase before shifting
-            oneChar = tolower(oneChar);
-            oneChar = (oneChar - 'a' + 3) % 26 + 'a'; // shift 
-        }
-    }
-    _isEncrypt = true;
-    return _text;
+	int i = 0;
+	int j = 0;
+	int length = text.size();
+	for (i = 0; i < length; i++)
+	{
+		if (isalpha(text[i]))
+		{
+			for (j = 0; j < 3; j++)
+			{
+				text[i] -= 1;
+				if (text[i] < 'a')
+				{
+					text[i] = 'z';
+				}
+			}
+		}
+	}
+	return text;
+}
+std::string CaesarText::decrypt()
+{
+	if (this->_isEncrypted == false)
+	{
+		return this->_text;
+	}
+	std::string text = getText();
+	this->_isEncrypted = false;
+	this->_text = decrypt(text);
+	return this->_text;
 }
 
-// not static decryption function
-string CaesarText::decrypt()
+std::string CaesarText::encrypt()
 {
-    for (char& oneChar : _text)
-    {
-        if (isalpha(oneChar))
-        {
-            // convert to lower before shifting
-            oneChar = tolower(oneChar);
-            oneChar = (oneChar - 'a' - 3 + 26) % 26 + 'a'; // reverse shift 
-        }
-    }
-    _isEncrypt = false;
-    return _text;
+	if (this->_isEncrypted == true)
+	{
+		return this->_text;
+	}
+	std::string text = getText();
+	this->_isEncrypted = true;
+	this->_text = encrypt(text);
+	return this->_text;
 }
+

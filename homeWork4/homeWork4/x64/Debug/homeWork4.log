@@ -1,2 +1,4 @@
-﻿  CaesarText.cpp
+﻿  ShiftText.cpp
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(17,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(32,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   homeWork4.vcxproj -> C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\x64\Debug\homeWork4.exe

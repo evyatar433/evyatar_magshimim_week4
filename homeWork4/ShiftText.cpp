@@ -1,76 +1,80 @@
-#include <iostream>
-#include <string>
 #include "ShiftText.h"
 
-using namespace std;
-
 // constructor
-ShiftText::ShiftText(const string& text, int key) : PlainText(text), _key(key) 
+ShiftText::ShiftText(std::string text, int key) : PlainText(encrypt(text, key)), _key(key)
 {
- 
-    encrypt(text, key);
-
+	this->_isEncrypted = true;
 }
 
 // destructor
-ShiftText::~ShiftText() {}
-
-// static encryption function
-string ShiftText::encrypt(const string& text, int key)
+ShiftText::~ShiftText()
 {
-    string result = text; 
-    for (char& oneChar : result)
-    {
-        if (isalpha(oneChar))
-        {
-            oneChar = tolower(oneChar);
-            oneChar = (oneChar - 'a' + key) % 26 + 'a'; // shift
-        }
-    }
-    return result;
+
+	this->_key = 0;
+
 }
 
-// static decryption function
-string ShiftText::decrypt(const string& text, int key)
+// static encrypt function that encrypts the text using Caesar cipher
+std::string ShiftText::encrypt(std::string text, int key)
 {
-    string result = text;
-    for (char& oneChar : result)
-    {
-        if (isalpha(oneChar))
-        {
-            oneChar = tolower(oneChar);
-            oneChar = (oneChar - 'a' - key + 26) % 26 + 'a'; // reverse shift
-        }
-    }
-    return result;
+	int length = text.size(); 
+
+	// loop through each character of the text
+	for (int i = 0; i < length; i++)
+	{
+		// check if the character is an alphabet)
+		if (isalpha(text[i]))
+		{
+
+			char letter = (isupper(text[i])) ? 'A' : 'a'; // change to lower
+			text[i] = letter + (text[i] - letter + key) % 26;
+		}
+	}
+
+	// return the encrypted text
+	return text;
 }
 
-// not static encryption function (operates on _text)
-string ShiftText::encrypt()
+
+// static decrypt
+std::string ShiftText::decrypt(std::string text, int key)
 {
-    for (char& oneChar : _text)
-    {
-        if (isalpha(oneChar))
-        {
-            oneChar = tolower(oneChar);
-            oneChar = (oneChar - 'a' + _key) % 26 + 'a'; // shift
-        }
-    }
-    _isEncrypt = true;
-    return _text;
+	int length = text.size();
+	for (int i = 0; i < length; i++)
+	{
+		if (isalpha(text[i])) // check if the character is a letter
+		{
+			char base = (isupper(text[i])) ? 'A' : 'a'; // change to lower
+			text[i] = (text[i] - base - key + 26) % 26 + base; 
+		}
+	}
+	return text;
 }
 
-// not static decryption function (operates on _text)
-string ShiftText::decrypt()
+// non static encrypt
+std::string ShiftText::encrypt()
 {
-    for (char& oneChar : _text)
-    {
-        if (isalpha(oneChar))
-        {
-            oneChar = tolower(oneChar);
-            oneChar = (oneChar - 'a' - _key + 26) % 26 + 'a'; // reverse shift
-        }
-    }
-    _isEncrypt = false;
-    return _text;
+	if (this->isEncrypted() == true)
+	{
+		return this->_text; // no change
+	}
+	// change
+	std::string text = getText();
+	this->_text = encrypt(text, _key);
+	this->_isEncrypted = true;
+	return this->_text;
+}
+
+// non static decrypt
+std::string ShiftText::decrypt()
+{
+	if (this->isEncrypted() == false)
+	{
+		return this->_text; // no change
+	}
+	// change
+	std::string text = getText();
+	this->_text = decrypt(text, _key);
+	this->_isEncrypted = false;
+	return this->_text;
 }
