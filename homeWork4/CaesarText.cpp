@@ -12,28 +12,31 @@ CaesarText::~CaesarText()
 
 }
 
+// static encrypt function that encrypts the text with caesar cipher
 std::string CaesarText::encrypt(std::string text)
 {
-	int i = 0;
-	int j = 0;
 	int length = text.size();
-	for (i = 0; i < length; i++)
+
+	for (int i = 0; i < length; i++)
 	{
 		if (isalpha(text[i]))
 		{
-			for (j = 0; j < 3; j++)
+			// chhange lowercase letters
+			if (islower(text[i]))
 			{
-				text[i] += 1;
-				if (text[i] > 'z')
-				{
-					text[i] = 'a';
-				}
+				text[i] = (text[i] - 'a' + 3) % 26 + 'a';
+			}
+			// change lowercase letters
+			else if (isupper(text[i]))
+			{
+				text[i] = (text[i] - 'A' + 3) % 26 + 'A';
 			}
 		}
 	}
 	return text;
 }
 
+// static decrypt function that decrypts the text with caesar cipher
 std::string CaesarText::decrypt(std::string text)
 {
 	int i = 0;
@@ -55,6 +58,24 @@ std::string CaesarText::decrypt(std::string text)
 	}
 	return text;
 }
+
+
+
+// non stantic encrypt
+std::string CaesarText::encrypt()
+{
+	if (this->_isEncrypted == true)
+	{
+		return this->_text;
+	}
+	std::string text = getText();
+	this->_isEncrypted = true;
+	this->_text = encrypt(text);
+	return this->_text;
+}
+
+
+// non static decrypt
 std::string CaesarText::decrypt()
 {
 	if (this->_isEncrypted == false)
@@ -67,15 +88,4 @@ std::string CaesarText::decrypt()
 	return this->_text;
 }
 
-std::string CaesarText::encrypt()
-{
-	if (this->_isEncrypted == true)
-	{
-		return this->_text;
-	}
-	std::string text = getText();
-	this->_isEncrypted = true;
-	this->_text = encrypt(text);
-	return this->_text;
-}
 

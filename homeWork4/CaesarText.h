@@ -1,5 +1,6 @@
 #ifndef _CAESARTEXT_H_
 #define _CAESARTEXT_H_
+
 #include <iostream>
 #include "ShiftText.h"
 

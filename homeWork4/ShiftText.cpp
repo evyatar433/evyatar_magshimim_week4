@@ -14,7 +14,7 @@ ShiftText::~ShiftText()
 
 }
 
-// static encrypt function that encrypts the text using Caesar cipher
+// static encrypt function that encrypts the text using caesar cipher
 std::string ShiftText::encrypt(std::string text, int key)
 {
 	int length = text.size(); 
@@ -36,7 +36,7 @@ std::string ShiftText::encrypt(std::string text, int key)
 }
 
 
-// static decrypt
+// static decrypt function that decrypts the text using caesar cipher
 std::string ShiftText::decrypt(std::string text, int key)
 {
 	int length = text.size();

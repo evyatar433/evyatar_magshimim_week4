@@ -1,4 +1,6 @@
-﻿  ShiftText.cpp
-C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(17,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\ShiftText.cpp(32,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+﻿  main.cpp
+  test5operator.cpp
+  Generating Code...
+homeWork4\x64\Debug\FileHelper.obj : warning LNK4042: object specified more than once; extras ignored
+homeWork4\x64\Debug\ShiftText.obj : warning LNK4042: object specified more than once; extras ignored
   homeWork4.vcxproj -> C:\Users\Cyber_User\OneDrive\Magshimim\c++\evyatar_magshimim_week4\homeWork4\x64\Debug\homeWork4.exe

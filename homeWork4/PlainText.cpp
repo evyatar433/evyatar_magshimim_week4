@@ -28,3 +28,12 @@ std::string PlainText::getText() const
 {
 	return this->_text;
 }
+
+
+
+// Definition of the overloaded << operator
+std::ostream& operator<<(std::ostream& os, const PlainText& pt) 
+{
+	os << pt._text; 
+	return os;
+}

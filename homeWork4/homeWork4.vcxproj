@@ -128,13 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CaesarText.cpp" />
+    <ClCompile Include="conversation.cpp" />
     <ClCompile Include="FileHelper.cpp" />
     <ClCompile Include="FileHelper.h" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="PlainText.cpp" />
     <ClCompile Include="ShiftText.cpp" />
     <ClCompile Include="ShiftText.h" />
     <ClCompile Include="SubstitutionText.cpp" />
     <ClCompile Include="test1Shift.cpp" />
+    <ClCompile Include="test2Substitution.cpp" />
+    <ClCompile Include="test3static.cpp" />
+    <ClCompile Include="test5operator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CaesarText.h" />
